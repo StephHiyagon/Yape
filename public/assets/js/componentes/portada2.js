@@ -67,9 +67,11 @@ check.on('click',validaAmbos);
 		console.log(input);
     if(!regEx.test(input.value)){
       console.log('tiene menos de 9 dígitos');
+			input.style.borderBottom="1px solid black";
     }else{
     	console.log('tiene 9 dígitos');
 			input.style.borderBottom="1px solid green";
+			// validaAmbos($('input[type="checkbox"]'));...aqui debe validar el checked
     }
 	};
 
