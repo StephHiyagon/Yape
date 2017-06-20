@@ -51,9 +51,11 @@ function validaAmbos(e){
 		console.log(e.target);
 		if(e.target.checked && (input.val().length==9)){
 			console.log('seleccionado e input lleno');
-			$('button').removeAttr('disabled');
+			// $('button').removeAttr('disabled');
+			$('button').prop('disabled','');
 		}else{
-			$('button').Attr('disabled');
+			console.log('deshabilita');
+			$('button').prop('disabled','disabled');
 		}
 	};
 
