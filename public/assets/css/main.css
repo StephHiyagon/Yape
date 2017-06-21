@@ -32,7 +32,7 @@ div.wrapper{
   }
 
   #slide ul li img{
-    width:100%;
+    width:80%;
     position: relative;
     top: 12rem;
   }
@@ -85,7 +85,7 @@ div.wrapper{
   opacity:1;
 }
 
-div.input{
+div.input, div.input2{
   position:relative;
 }
 
@@ -95,7 +95,7 @@ div.input{
   width: 60%;
 }
 
-div.input>input{
+div.input>input, div.input2>input, input{
   outline: 0;
   border: 1px;
   border-bottom-style: solid;
@@ -110,13 +110,23 @@ div.input>img{
   top:-1rem;
 }
 
+div.input2>img{
+  width: 10%;
+  position:absolute;
+  top:-1rem;
+}
+
 .lg{
   display: block;
   width:60%;
   margin:20px auto;
 }
 
-div.port2, div.port3{
+.fuentL{
+  font-size: 3rem;
+}
+
+div.port2, div.port3, div.port4, .port{
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -127,4 +137,36 @@ div.port2, div.port3{
 .turquesa{
   display:inline-block;
   color:green;
+}
+
+div.yape{
+  height: 100vh;
+  background-color: #FBD43B;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.yape>img{
+  width: 50%;
+  margin: 20px;
+}
+
+.fuent6{
+  font-size:6rem;
+}
+
+.fuent5{
+  font-size: 5rem;
+}
+
+div.final{
+  height: 100vh;
+  background-color: #38052A;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

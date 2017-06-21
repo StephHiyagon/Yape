@@ -10,7 +10,7 @@ const Portada2=(update)=>{
 	const imgInput=$('<img src="assets/image/icons/phoneandnumber.png" />');
 	const divCheck=$('<div></div>');
 	const check=$('<input type="checkbox" value="1">Acepto los <span class="turquesa">términos y condiciones</span>');
-	const buttonCont=$('<button class="btn btn-info lg" disabled>Continuar<button>');
+	const buttonCont=$('<button class="btn btn-info lg" disabled>Continuar</button>');
 
 	div2.append(img2);
 	div2.append(h2);
