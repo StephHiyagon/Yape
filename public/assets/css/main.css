@@ -116,7 +116,7 @@ div.input>img{
   margin:20px auto;
 }
 
-div.port2{
+div.port2, div.port3{
   height: 80vh;
   display: flex;
   flex-direction: column;

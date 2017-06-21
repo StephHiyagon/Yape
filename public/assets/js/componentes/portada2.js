@@ -29,11 +29,13 @@ const Portada2=(update)=>{
 	var teclado=String.fromCharCode(key).toLowerCase();
   console.log(teclado);
   var numeros="0123456789";
-  var especiales="8-37-38-46-164";
+  var especiales="8-37-38-46-164-96-97";
   var teclado_especial=false;
   for (var i in especiales){
     if(key==especiales[i]){
 			teclado_especial=true;
+			console.log('estas borrando caracteres');
+			input.on('keyup',validaInput(regPhone));
 			break;
     }
   }
@@ -41,15 +43,16 @@ const Portada2=(update)=>{
 			return false;
   }
 
-	input.on('keyup',validaInput(regPhone));
+	input.on('keydown',validaInput(regPhone));
 	// validaAmbos($('input[type="checkbox"]'));
 
   }
 
 
 function validaAmbos(e){
-		console.log(e.target);
-		if(e.target.checked && (input.val().length==9)){
+		console.log(check[0].checked);
+		// console.log(e.target);
+		if(check[0].checked && (input.val().length==9)){
 			console.log('seleccionado e input lleno');
 			// $('button').removeAttr('disabled');
 			$('button').prop('disabled','');
@@ -67,17 +70,47 @@ check.on('click',validaAmbos);
 		console.log(input);
     if(!regEx.test(input.value)){
       console.log('tiene menos de 9 dígitos');
-			input.style.borderBottom="1px solid black";
+			input.style.borderBottom="1px solid red";
+			if(check[0].checked){
+				$('button').prop('disabled','disabled');
+			}
     }else{
     	console.log('tiene 9 dígitos');
 			input.style.borderBottom="1px solid green";
-			// validaAmbos($('input[type="checkbox"]'));...aqui debe validar el checked
+			if(check[0].checked){
+				$('button').prop('disabled','');
+			}
+			console.log("entraste a validar checked");
     }
 	};
 
 	// if(input.val().length==9 && )
 
 	input.on({'keypress':num});
+
+	// var code;
+	buttonCont.on('click',()=>{
+		console.log(state.pantalla);
+		console.log(input.val());
+		// let codigo;
+		var code = $.post('api/registerNumber',{phone:input.val(), terms:true},(response)=>{
+			console.log(response);
+			console.log(response.message);
+			console.log(response.data);
+			console.log(response.data.phone);
+			console.log(response.data.code);
+			state.phone=response.data.phone;
+			console.log(state.phone);
+			$('.phone').text(response.data.phone);
+			return response;
+
+		},'json');
+		state.pantalla='portada3';
+		state.code=code;
+		// code=codigo;
+		// console.log(codigo);
+		update();
+	})
 	// input.on('keypress',validaInput(regPhone));
 	return div2;
 
