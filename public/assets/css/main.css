@@ -4,7 +4,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-
+  font-family: 'Open Sans', sans-serif;
 }
 
 div.wrapper{
@@ -52,6 +52,8 @@ div.wrapper{
     position: relative;
     top: 18rem;
     font-size: 7rem;
+    font-weight: 800;
+    color: #212121;
   }
 
   #slide ul li .caption h3{
@@ -61,16 +63,18 @@ div.wrapper{
     width: 80%;
     margin: auto;
     font-size:5rem;
+    font-weight: 400;
+    color: #8f8f8f;
   }
 
 #indicator{
   display:block;
-  position:relative;
+  position:absolute;
   width:100%;
   margin:auto;
   height: 10px;
   text-align: center;
-  top:30rem;
+  bottom: 55rem;
   font-size: 3rem;
 }
 
@@ -109,10 +113,14 @@ div.input, div.input2{
   font-size: 4rem;
 }
 
+.user{
+  width:100%;
+}
+
 div.input>img{
   width: 25%;
   position:absolute;
-  top:-3rem;
+  top:-1rem;
   left:1rem;
 }
 
@@ -120,22 +128,40 @@ div.input>img.icoinp{
   width: 8%;
   position:absolute;
   top:0rem;
-  left:1rem;
+  left:-5rem;
 }
 
 .h2{
   font-size:6rem;
+  font-weight: 800;
+  color: #212121;
 }
 
 .h4{
   font-size:4rem;
+  font-weight: 400;
+  color: #8f8f8f;
+}
+
+.phone{
+  font-weight: 800;
+  color: #212121;
 }
 
 .checkdiv{
   font-size: 3rem;
 }
 
-#lg, #b4{
+.span{
+  width:50%;
+}
+
+.scan{
+  width:13%;
+  margin:10px;
+}
+
+#lg, #b4, #btr, #bp7{
   display: block;
   width:60%;
   margin:20px auto;
@@ -143,6 +169,17 @@ div.input>img.icoinp{
   font-size: 4rem;
   background-color:#cec8c8;
   color:white;
+}
+
+p.venci{
+  font-size: 4rem;
+  display:inline-block;
+}
+
+div.vencimiento{
+  display:inline-block;
+  font-size: 3rem;
+  width:30%;
 }
 
 .fuentL{
@@ -173,16 +210,18 @@ div.yape{
 }
 
 div.yape>img{
-  width: 50%;
+  width: 31%;
   margin: 20px;
 }
 
 .fuent6{
   font-size:6rem;
+  font-weight: 800;
 }
 
 .fuent5{
   font-size: 5rem;
+  font-weight: 800;
 }
 
 div.final{
@@ -234,7 +273,12 @@ div.final{
 
 .marg{
   margin:2rem;
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+.imgM{
+  width:7%;
+  margin:2rem;
 }
 
 .peque{
@@ -245,7 +289,7 @@ div.final{
 .des{
   position: relative;
   top: 4rem;
-  left: -25rem;
+  left: 2rem;
 }
 
 .vin3{
@@ -258,4 +302,15 @@ div.final{
   position: relative;
   top: 40rem;
   left: 25rem;
+}
+
+#mes,#anio{
+  width:15%;
+}
+
+.divPar{
+  font-size: 4rem;
+  display: inline-block;
+  position: relative;
+  top: 10rem;
 }

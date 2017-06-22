@@ -70,15 +70,15 @@ check.on('click',validaAmbos);
 		console.log(input);
     if(!regEx.test(input.value)){
       console.log('tiene menos de 9 dígitos');
-			input.style.borderBottom="1px solid red";
+			input.style.borderBottom="1.5px solid red";
 			if(check[0].checked){
 				$('button').prop('disabled','disabled');
 			}
     }else{
     	console.log('tiene 9 dígitos');
-			input.style.borderBottom="1px solid green";
+			input.style.borderBottom="1.5px solid #37c603";
 			if(check[0].checked){
-				$('button').prop('disabled','');
+				$('button').prop('disabled','').css('background',' #fbd43b');;
 			}
 			console.log("entraste a validar checked");
     }
@@ -92,26 +92,30 @@ check.on('click',validaAmbos);
 	buttonCont.on('click',()=>{
 		console.log(state.pantalla);
 		console.log(input.val());
-		// let codigo;
+
 		var code = $.post('api/registerNumber',{phone:input.val(), terms:true},(response)=>{
 			console.log(response);
 			console.log(response.message);
-			console.log(response.data);
-			console.log(response.data.phone);
-			console.log(response.data.code);
-			state.phone=response.data.phone;
-			console.log(state.phone);
-			$('.phone').text(response.data.phone);
+
+			if(response.message == "El número ya existe"){
+				alert('Error: '+ response.message);
+				state.pantalla="portada2";
+				update();
+			}else{
+				console.log(response.data.phone);
+				state.pantalla='portada3';
+				state.code=code;
+
+				update();
+			}
+
 			return response;
 
 		},'json');
-		state.pantalla='portada3';
-		state.code=code;
-		// code=codigo;
-		// console.log(codigo);
-		update();
+
+
 	})
-	// input.on('keypress',validaInput(regPhone));
+
 	return div2;
 
 }

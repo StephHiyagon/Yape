@@ -5,13 +5,13 @@ const Portada4=(update)=>{
   const strong=$('<strong class="h2">Crea tu usuario Yape</strong>');
   const parrafo=$('<p class="h4">Ingresa un nombre, email y clave de usuario </p>');
   const divI1=$('<div class="input"></div>');
-	const input1=$('<input class="input" type="text" placeholder="Nombre">');
+	const input1=$('<input class="input user" type="text" placeholder="Nombre">');
 	const imgI1=$('<img class="icoinp" src="assets/image/icons/user.png" width="40%"/>');
   const divI2=$('<div class="input"></div>');
-	const input2=$('<input class="input" type="text" placeholder="correo@ejemplo.com">');
+	const input2=$('<input class="input user" type="text" placeholder="correo@ejemplo.com">');
 	const imgI2=$('<img class="icoinp" src="assets/image/icons/message-gray.png" width="40%"/>');
   const divI3=$('<div class="input"></div>');
-	const input3=$('<input class="input" type="text" placeholder="Ingresa clave de 6 dígitos">');
+	const input3=$('<input class="input user" type="password" placeholder="Ingresa clave de 6 dígitos">');
 	const imgI3=$('<img class="icoinp" src="assets/image/icons/lock.png" width="40%"/>');
   const parrafo1=$('<p class="fuentL">Cuida esta clave como oro, es tu acceso a Yape.</p>');
   const button=$('<button id="b4" class="btn btn-info" disabled>Continuar</button>');
@@ -38,7 +38,7 @@ const Portada4=(update)=>{
     	separa.forEach(function(e){
         return txt = txt + e.charAt(0).toUpperCase() + e.slice(1) + " ";});
       var imp=txt.trim();
-      e.target.style.borderBottom="1px solid green";
+      e.target.style.borderBottom="1.5px solid #37c603";
     	return e.target.value=imp;
 
     }
@@ -52,7 +52,7 @@ const Portada4=(update)=>{
     e.target.style.borderBottom="1px solid red";
   }else{
     console.log("válido");
-    e.target.style.borderBottom="1px solid green";
+    e.target.style.borderBottom="1.5px solid #37c603";
   }
 }
 
@@ -63,8 +63,8 @@ const Portada4=(update)=>{
     console.log(input2.val().length);
     if(clave.length==6 && input1.val().length!=0 && input2.val().length != 0){
       console.log('tiene 6 dígitos, correo validado y nombre completado');
-      e.target.style.borderBottom="1px solid green";
-      $('button').prop('disabled','').css('background',' #fbd43b');;
+      e.target.style.borderBottom="1.5px solid #37c603";
+      $('button').prop('disabled','').css('background',' #fbd43b');
     }
   }
 

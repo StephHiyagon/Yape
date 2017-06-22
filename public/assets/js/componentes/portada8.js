@@ -10,7 +10,7 @@ const Portada8=(update)=>{
   const span=$('<span class="turquesa">Mostrar Saldos</span>');
   const divMe=$('<div class="movi"></div>');
   const span2=$('<span class="marg">ULTIMOS MOVIMIENTOS</span>');
-  const vin2=$('<img class="marg" src="assets/image/icons/right-arrow-circular-button.png"/>');
+  const vin2=$('<img class="imgM" src="assets/image/icons/right-arrow-circular-button.png"/>');
   const divPe=$('<div class="peque"></div>');
   const des=$('<img class="des" src="assets/image/icons/icon.png"/>');
   const divParra=$('<div class="divPar"></p>');

@@ -2,21 +2,21 @@ const Portada6=(update)=>{
   console.log('pantalla6');
   const divP6=$('<div class="port"></div>');
   const img=$('<img src="assets/image/icons/bcp-logo.png"/>');
-  const strong=$('<strong class="fuentL">Registra tu tarjeta debito BCP</strong>');
-  const parrafo=$('<p class="fuentL">Por ahora solo aceptamos cuentas de ahorro y/o corrientes en soles </p>');
-  const divI1=$('<div class="input2"></div>');
-	const input1=$('<input type="text">');
-	const imgI1=$('<img src="assets/image/icons/card.png" width="60%"/>');
+  const strong=$('<strong class="h2">Registra tu tarjeta debito BCP</strong>');
+  const parrafo=$('<p class="h4">Por ahora solo aceptamos cuentas de ahorro y/o corrientes en soles </p>');
+  const divI1=$('<div class="input"></div>');
+	const input1=$('<input class="input user" type="text">');
+	const imgI1=$('<img class="icoinp" src="assets/image/icons/card.png" width="40%"/>');
   const divS=$('<div class="span"></div>');
-  const imgS=$('<img src="assets/image/icons/scan.png" width="60%"/>');
-  const span=$('<span class="turquesa">Escanear tarjeta</span>');
+  const imgS=$('<img class="icoinp scan" src="assets/image/icons/scan.png" width="40%"/>');
+  const span=$('<span class="turquesa h4">Escanear tarjeta</span>');
   const divPa=$('<div></div>');
-  const divV=$('<div></div>');
-  const parrafo1=$('<p>Fecha de vencimiento</p>');
-  const inputM=$('<input id="mes" type="text">');
+  const divV=$('<div class="vencimiento"></div>');
+  const parrafo1=$('<p class="venci">Fecha de vencimiento</p>');
+  const inputM=$('<input id="mes" class="input user" type="text">');
   const separa=$('<span>/</span>');
-  const inputA=$('<input id="anio" type="text">');
-  const button=$('<button class="btn btn-info lg" disabled>Continuar</button>');
+  const inputA=$('<input id="anio" class="input user" type="text">');
+  const button=$('<button class="btn btn-info" id="btr" disabled>Continuar</button>');
 
   divP6.append(img);
   divP6.append(strong);
@@ -37,26 +37,26 @@ const Portada6=(update)=>{
 
   function valida(e){
     if(input1.val().length==16){
-      input1.css('border-bottom','1px solid green');
+      input1.css('border-bottom','1.5px solid #37c603');
     }else{
       return false;
     }
 
     if(inputM.val()>=01 && inputM.val()<=12){
       console.log(inputM.val());
-      inputM.css('border-bottom','1px solid green');
+      inputM.css('border-bottom','1.5px solid #37c603');
     }else{
       return false;
     }
 
     if(inputA.val()>=17 && inputM.val()<=24){
-      inputA.css('border-bottom','1px solid green');
+      inputA.css('border-bottom','1.5px solid #37c603');
     }else{
       return false;
     }
 
     if(input1.val().length==16 && inputM.val().length==2 && inputA.val().length==2){
-      $('button').prop('disabled','');
+      $('button').prop('disabled','').css('background',' #fbd43b');
     }
   }
 

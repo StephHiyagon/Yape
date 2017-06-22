@@ -2,12 +2,12 @@ const Portada7=(update)=>{
   console.log('portada7');
   const divP7=$('<div class="port"></div>');
   const img=$('<img src="assets/image/icons/bcp-logo.png"/>');
-  const strong=$('<strong class="fuentL">Ingresa la clave de tu tarjeta</strong>');
-  const parrafo=$('<p class="fuentL">Tarjeta ****3263</p>');
-  const divI1=$('<div class="input2"></div>');
-	const input1=$('<input type="text" placeholder="----">');
-	const imgI1=$('<img src="assets/image/icons/lock.png" width="60%"/>');
-  const button=$('<button class="btn btn-info lg" disabled>Registrar</button>');
+  const strong=$('<strong class="h2">Ingresa la clave de tu tarjeta</strong>');
+  const parrafo=$('<p class="h4">Tarjeta ****3263</p>');
+  const divI1=$('<div class="input"></div>');
+	const input1=$('<input type="password" class="input" placeholder="----">');
+	const imgI1=$('<img class="icoinp" src="assets/image/icons/lock.png" width="40%"/>');
+  const button=$('<button class="btn btn-info" id="bp7" disabled>Registrar</button>');
 
   divP7.append(img);
   divP7.append(strong);
@@ -19,7 +19,7 @@ const Portada7=(update)=>{
 
   function valida(e){
     if(input1.val().length==4){
-      $('button').prop('disabled','');
+      $('button').prop('disabled','').css('background',' #fbd43b');
     }
   }
 
