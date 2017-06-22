@@ -32,7 +32,7 @@ div.wrapper{
   }
 
   #slide ul li img{
-    width:80%;
+    width:60%;
     position: relative;
     top: 12rem;
   }
@@ -50,16 +50,17 @@ div.wrapper{
   #slide ul li .caption h2{
     padding: 5px 0;
     position: relative;
-    top: 13rem;
-    font-size: 4rem;
+    top: 18rem;
+    font-size: 7rem;
   }
 
   #slide ul li .caption h3{
     padding-bottom: 10px;
     position: relative;
-    top: 14rem;
-    width: 50%;
+    top: 22rem;
+    width: 80%;
     margin: auto;
+    font-size:5rem;
   }
 
 #indicator{
@@ -69,7 +70,8 @@ div.wrapper{
   margin:auto;
   height: 10px;
   text-align: center;
-  top:120px;
+  top:30rem;
+  font-size: 3rem;
 }
 
 #indicator li{
@@ -91,35 +93,56 @@ div.input, div.input2{
 
 #registro{
   position:relative;
-  top: 20rem;
+  top: 46rem;
   width: 60%;
+  height: 5vh;
+  font-size: 4rem;
+  background-color:  #fbd43b;
 }
 
-div.input>input, div.input2>input, input{
+.input {
   outline: 0;
   border: 1px;
   border-bottom-style: solid;
-  width: 100%;
+  width: 50%;
   text-align: center;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 div.input>img{
-  width: 30%;
+  width: 25%;
   position:absolute;
-  top:-1rem;
+  top:-3rem;
+  left:1rem;
 }
 
-div.input2>img{
-  width: 10%;
+div.input>img.icoinp{
+  width: 8%;
   position:absolute;
-  top:-1rem;
+  top:0rem;
+  left:1rem;
 }
 
-.lg{
+.h2{
+  font-size:6rem;
+}
+
+.h4{
+  font-size:4rem;
+}
+
+.checkdiv{
+  font-size: 3rem;
+}
+
+#lg, #b4{
   display: block;
   width:60%;
   margin:20px auto;
+  height: 4vh;
+  font-size: 4rem;
+  background-color:#cec8c8;
+  color:white;
 }
 
 .fuentL{
@@ -127,6 +150,7 @@ div.input2>img{
 }
 
 div.port2, div.port3, div.port4, .port{
+  margin-top: 10rem;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -136,7 +160,7 @@ div.port2, div.port3, div.port4, .port{
 
 .turquesa{
   display:inline-block;
-  color:green;
+  color: #00c3a3;
 }
 
 div.yape{
@@ -165,8 +189,73 @@ div.final{
   height: 100vh;
   background-color: #38052A;
   color:white;
+}
+
+.morClaro{
+  background-color:  #451e36;
+  width: 100%;
+  height: 34vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+}
+
+.vineta{
+  width: 7%;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.face{
+  width: 25%;
+  margin-bottom: 2rem;
+}
+
+.hola{
+  margin: 2rem;
+  font-size: 4rem;
+}
+
+.saldo{
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.movi{
+  width: 100%;
+  height: 6vh;
+  background: #38052a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.marg{
+  margin:2rem;
+  font-size: 2rem;
+}
+
+.peque{
+  height: 60vh;
+  background:  #38052a;
+}
+
+.des{
+  position: relative;
+  top: 4rem;
+  left: -25rem;
+}
+
+.vin3{
+  position: relative;
+  top: 40rem;
+  left: -25rem;
+}
+
+.vin4{
+  position: relative;
+  top: 40rem;
+  left: 25rem;
 }

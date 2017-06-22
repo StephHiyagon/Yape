@@ -1,6 +1,7 @@
 const Portada3=(update)=>{
   console.log('estas en la portada3');
   var codeG;
+  alert('token en consola');
   setTimeout(function(){
     var codigo=state.code;
     console.log(state.code);
@@ -24,17 +25,17 @@ const Portada3=(update)=>{
     //   ,21000);
     // }
 
-  },15000);
+  },21000);
 
-  const divP3=$('<div class="port3"></div>');
+  const divP3=$('<div class="port"></div>');
   const img=$('<img src="assets/image/icons/message.png"/>');
-  const strong=$('<strong class="fuentL">Ahora ingresa tu código</strong>');
-  const parrafo=$('<p class="fuentL">Enviamos un SMS con el código de validación al número </p>');
+  const strong=$('<strong class="h2">Ahora ingresa tu código</strong>');
+  const parrafo=$('<p class="h4">Enviamos un SMS con el código de validación al número </p>');
   const spanP=$('<span class="phone"></span>');
-  const divI=$('<div class="input2"></div>');
-	const input=$('<input type="text">');
-	const imgI=$('<img src="assets/image/icons/lock.png" width="60%"/>');
-  const parrafo1=$('<p>Reintentar en <img src="assets/image/icons/clock.png" /> 21 segundos</p>');
+  const divI=$('<div class="input"></div>');
+	const input=$('<input class="input" type="text">');
+	const imgI=$('<img class="icoinp" src="assets/image/icons/lock.png"width="40%"/>');
+  const parrafo1=$('<p class="h4">Reintentar en <img src="assets/image/icons/clock.png" /> 21 segundos</p>');
 
   divP3.append(img);
   divP3.append(strong);
@@ -46,14 +47,14 @@ const Portada3=(update)=>{
   divP3.append(parrafo1);
 
   function comparar(elem){
-    alert('Token:' + elem);
+
     // input.on('keypress',()=>{
       console.log(input.val());
       if(input.val().length>1 && input.val()==elem){
         setTimeout(function(){
           state.pantalla="portada4";
           update();
-        },6000);
+        },1000);
       }
 
       if(input.val().length>=0 && input.val()!=elem){
@@ -66,9 +67,10 @@ const Portada3=(update)=>{
           })
 
         setTimeout(function(){
+          alert('Token:' + nuevoCode);
           console.log(nuevoCode);
           comparar(nuevoCode);
-        },15000);
+        },20000);
         // comparar(nuevoCode);
       }
 

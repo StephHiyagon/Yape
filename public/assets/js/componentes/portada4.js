@@ -2,19 +2,19 @@ const Portada4=(update)=>{
   console.log('portada4');
   const divP4=$('<div class="port4"></div>');
   const img=$('<img src="assets/image/icons/lockone.png"/>');
-  const strong=$('<strong class="fuentL">Crea tu usuario Yape</strong>');
-  const parrafo=$('<p class="fuentL">Ingresa un nombre, email y clave de usuario </p>');
-  const divI1=$('<div class="input2"></div>');
-	const input1=$('<input type="text" placeholder="Nombre">');
-	const imgI1=$('<img src="assets/image/icons/user.png" width="60%"/>');
-  const divI2=$('<div class="input2"></div>');
-	const input2=$('<input type="text" placeholder="correo@ejemplo.com">');
-	const imgI2=$('<img src="assets/image/icons/message-gray.png" width="60%"/>');
-  const divI3=$('<div class="input2"></div>');
-	const input3=$('<input type="text" placeholder="Ingresa clave de 6 dígitos">');
-	const imgI3=$('<img src="assets/image/icons/lock.png" width="60%"/>');
+  const strong=$('<strong class="h2">Crea tu usuario Yape</strong>');
+  const parrafo=$('<p class="h4">Ingresa un nombre, email y clave de usuario </p>');
+  const divI1=$('<div class="input"></div>');
+	const input1=$('<input class="input" type="text" placeholder="Nombre">');
+	const imgI1=$('<img class="icoinp" src="assets/image/icons/user.png" width="40%"/>');
+  const divI2=$('<div class="input"></div>');
+	const input2=$('<input class="input" type="text" placeholder="correo@ejemplo.com">');
+	const imgI2=$('<img class="icoinp" src="assets/image/icons/message-gray.png" width="40%"/>');
+  const divI3=$('<div class="input"></div>');
+	const input3=$('<input class="input" type="text" placeholder="Ingresa clave de 6 dígitos">');
+	const imgI3=$('<img class="icoinp" src="assets/image/icons/lock.png" width="40%"/>');
   const parrafo1=$('<p class="fuentL">Cuida esta clave como oro, es tu acceso a Yape.</p>');
-  const button=$('<button class="btn btn-info lg" disabled>Continuar</button>');
+  const button=$('<button id="b4" class="btn btn-info" disabled>Continuar</button>');
 
   divP4.append(img);
   divP4.append(strong);
@@ -64,7 +64,7 @@ const Portada4=(update)=>{
     if(clave.length==6 && input1.val().length!=0 && input2.val().length != 0){
       console.log('tiene 6 dígitos, correo validado y nombre completado');
       e.target.style.borderBottom="1px solid green";
-      $('button').prop('disabled','');
+      $('button').prop('disabled','').css('background',' #fbd43b');;
     }
   }
 

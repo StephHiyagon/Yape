@@ -1,16 +1,16 @@
 // 'use strict';
 const Portada2=(update)=>{
 	console.log('portada2 entraste!!!');
-	const div2=$('<div class="port2"></div>');
+	const div2=$('<div class="port"></div>');
 	const img2=$('<img src="assets/image/icons/phone.png"/>');
-	const h2=$('<h2>Para comenzar validamos tu número</h2>');
-	const h4=$('<h4>Recibirás un SMS con un código de validación</h4>');
+	const h2=$('<h2 class="h2">Para comenzar validamos tu número</h2>');
+	const h4=$('<h4 class="h4">Recibirás un SMS con un código de validación</h4>');
 	const divInp=$('<div class="input"></div>');
-	const input=$('<input type="text">');
-	const imgInput=$('<img src="assets/image/icons/phoneandnumber.png" />');
-	const divCheck=$('<div></div>');
+	const input=$('<input  class="input" type="text">');
+	const imgInput=$('<img src="assets/image/icons/phoneandnumber.png" width="40%" />');
+	const divCheck=$('<div class="checkdiv"></div>');
 	const check=$('<input type="checkbox" value="1">Acepto los <span class="turquesa">términos y condiciones</span>');
-	const buttonCont=$('<button class="btn btn-info lg" disabled>Continuar</button>');
+	const buttonCont=$('<button id="lg" class="btn btn-default" disabled>Continuar</button>');
 
 	div2.append(img2);
 	div2.append(h2);
@@ -55,7 +55,7 @@ function validaAmbos(e){
 		if(check[0].checked && (input.val().length==9)){
 			console.log('seleccionado e input lleno');
 			// $('button').removeAttr('disabled');
-			$('button').prop('disabled','');
+			$('button').prop('disabled','').css('background',' #fbd43b');
 		}else{
 			console.log('deshabilita');
 			$('button').prop('disabled','disabled');
